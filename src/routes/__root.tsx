@@ -11,6 +11,9 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { SiteHeader } from "../components/SiteHeader";
+import { SiteFooter } from "../components/SiteFooter";
+import { WhatsAppFab } from "../components/WhatsAppFab";
 
 function NotFoundComponent() {
   return (
@@ -77,21 +80,19 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
-    ],
-    links: [
+      { title: "Lloyds Business Solution — Printing, Government & Digital Services in Nairobi" },
       {
-        rel: "stylesheet",
-        href: appCss,
+        name: "description",
+        content:
+          "Nairobi's all-in-one hub for printing, KRA & NTSA services, computer repairs, CV writing, training and business solutions. Fast, reliable, trusted.",
       },
+      { name: "author", content: "Lloyds Business Solution" },
+      { property: "og:title", content: "Lloyds Business Solution — Nairobi" },
+      { property: "og:description", content: "Printing • Government Services • Repairs • Training • Business Solutions" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "stylesheet", href: appCss }],
   }),
   shellComponent: RootShell,
   component: RootComponent,
@@ -115,11 +116,14 @@ function RootShell({ children }: { children: ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
-
   return (
     <QueryClientProvider client={queryClient}>
-      {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-      <Outlet />
+      <SiteHeader />
+      <main className="min-h-[60vh]">
+        <Outlet />
+      </main>
+      <SiteFooter />
+      <WhatsAppFab />
     </QueryClientProvider>
   );
 }
