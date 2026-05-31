@@ -20,9 +20,9 @@ export function SiteHeader() {
           <img
             src={logo}
             alt="Lloyds Business Solution logo"
-            width={260}
-            height={84}
-            className="h-14 w-auto md:h-16"
+            width={340}
+            height={108}
+            className="h-20 w-auto md:h-24"
           />
         </Link>
 
