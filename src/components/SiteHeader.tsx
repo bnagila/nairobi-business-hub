@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { Menu, X, Phone } from "lucide-react";
 import { useState } from "react";
 import { SITE, waLink } from "@/lib/site";
+import logo from "@/assets/lloyds-logo.png";
 
 const nav = [
   { to: "/", label: "Home" },
@@ -15,14 +16,14 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 border-b border-border/60 bg-background/85 backdrop-blur-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3.5">
-        <Link to="/" className="flex items-center gap-2">
-          <div className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-brand text-primary-foreground font-display font-bold">
-            L
-          </div>
-          <div className="leading-tight">
-            <div className="font-display text-base font-bold text-foreground">Lloyds</div>
-            <div className="text-[10px] uppercase tracking-widest text-muted-foreground">Business Solution</div>
-          </div>
+        <Link to="/" className="flex items-center gap-2" aria-label="Lloyds Business Solution — Home">
+          <img
+            src={logo}
+            alt="Lloyds Business Solution logo"
+            width={180}
+            height={56}
+            className="h-10 w-auto md:h-11"
+          />
         </Link>
 
         <nav className="hidden items-center gap-7 md:flex">

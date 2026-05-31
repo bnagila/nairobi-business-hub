@@ -1,15 +1,15 @@
 import { Link } from "@tanstack/react-router";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { SITE, waLink } from "@/lib/site";
+import logo from "@/assets/lloyds-logo.png";
 
 export function SiteFooter() {
   return (
     <footer className="mt-20 border-t border-border bg-primary text-primary-foreground">
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 md:grid-cols-4">
         <div className="md:col-span-2">
-          <div className="flex items-center gap-2">
-            <div className="grid h-9 w-9 place-items-center rounded-xl bg-gold text-gold-foreground font-display font-bold">L</div>
-            <span className="font-display text-lg font-bold">{SITE.name}</span>
+          <div className="rounded-xl bg-background p-3 inline-block">
+            <img src={logo} alt="Lloyds Business Solution" width={200} height={64} className="h-12 w-auto" />
           </div>
           <p className="mt-4 max-w-sm text-sm text-primary-foreground/75">
             Nairobi's all-in-one hub for printing, government services, computer repairs,
