@@ -101,54 +101,67 @@ function Home() {
         <div className="absolute -right-32 -top-32 h-96 w-96 rounded-full bg-gold/20 blur-3xl" />
         <div className="absolute -bottom-40 -left-20 h-96 w-96 rounded-full bg-secondary/30 blur-3xl" />
 
-        <div className="relative mx-auto max-w-6xl px-4 py-20 md:py-28">
-          <span className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/20 bg-primary-foreground/5 px-3 py-1 text-xs font-medium backdrop-blur">
-            <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-gold" />
-            Open today in Nairobi
-          </span>
-          <h1 className="mt-5 max-w-3xl font-display text-4xl font-bold leading-[1.1] md:text-6xl">
-            Your Complete Business & Digital Services Hub —{" "}
-            <span className="text-gold">In One Place.</span>
-          </h1>
-          <p className="mt-5 max-w-2xl text-base text-primary-foreground/85 md:text-lg">
-            Printing • Government Services • Repairs • Training • Business Solutions.
-            Trusted by individuals, students and SMEs across Nairobi.
-          </p>
+        <div className="relative mx-auto grid max-w-6xl gap-12 px-4 py-20 md:grid-cols-2 md:items-center md:py-28">
+          <div>
+            <span className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/20 bg-primary-foreground/5 px-3 py-1 text-xs font-medium backdrop-blur">
+              <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-gold" />
+              Open today in Nairobi
+            </span>
+            <h1 className="mt-5 font-display text-4xl font-bold leading-[1.1] md:text-5xl lg:text-6xl">
+              Your Complete Business & Digital Services Hub —{" "}
+              <span className="text-gold">In One Place.</span>
+            </h1>
+            <p className="mt-5 max-w-xl text-base text-primary-foreground/85 md:text-lg">
+              Printing • Government Services • Repairs • Training • Business Solutions.
+              Trusted by individuals, students and SMEs across Nairobi.
+            </p>
 
-          <div className="mt-8 flex flex-wrap gap-3">
-            <a
-              href={waLink()}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full bg-whatsapp px-6 py-3.5 text-sm font-semibold text-whatsapp-foreground shadow-elegant transition-transform hover:scale-[1.02]"
-            >
-              <MessageCircle className="h-4 w-4" /> Chat on WhatsApp
-            </a>
-            <Link
-              to="/contact"
-              className="inline-flex items-center gap-2 rounded-full bg-background px-6 py-3.5 text-sm font-semibold text-primary hover:bg-background/90"
-            >
-              <MapPin className="h-4 w-4" /> Visit Our Branch
-            </Link>
-            <a
-              href="#services"
-              className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/30 px-6 py-3.5 text-sm font-semibold text-primary-foreground hover:bg-primary-foreground/10"
-            >
-              Explore Services <ArrowRight className="h-4 w-4" />
-            </a>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <a
+                href={waLink()}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full bg-whatsapp px-6 py-3.5 text-sm font-semibold text-whatsapp-foreground shadow-elegant transition-transform hover:scale-[1.02]"
+              >
+                <MessageCircle className="h-4 w-4" /> Chat on WhatsApp
+              </a>
+              <Link
+                to="/contact"
+                className="inline-flex items-center gap-2 rounded-full bg-background px-6 py-3.5 text-sm font-semibold text-primary hover:bg-background/90"
+              >
+                <MapPin className="h-4 w-4" /> Visit Our Branch
+              </Link>
+              <a
+                href="#services"
+                className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/30 px-6 py-3.5 text-sm font-semibold text-primary-foreground hover:bg-primary-foreground/10"
+              >
+                Explore Services <ArrowRight className="h-4 w-4" />
+              </a>
+            </div>
+
+            <div className="mt-12 grid max-w-md grid-cols-3 gap-6 text-sm">
+              {[
+                { k: "20+", v: "Services offered" },
+                { k: "1000s", v: "Happy customers" },
+                { k: "6 days", v: "Open weekly" },
+              ].map((s) => (
+                <div key={s.v}>
+                  <div className="font-display text-2xl font-bold text-gold">{s.k}</div>
+                  <div className="text-primary-foreground/70">{s.v}</div>
+                </div>
+              ))}
+            </div>
           </div>
 
-          <div className="mt-12 grid max-w-2xl grid-cols-3 gap-6 text-sm">
-            {[
-              { k: "20+", v: "Services offered" },
-              { k: "1000s", v: "Happy customers" },
-              { k: "6 days", v: "Open weekly" },
-            ].map((s) => (
-              <div key={s.v}>
-                <div className="font-display text-2xl font-bold text-gold">{s.k}</div>
-                <div className="text-primary-foreground/70">{s.v}</div>
-              </div>
-            ))}
+          <div className="relative">
+            <div className="absolute -inset-4 rounded-3xl bg-gradient-to-tr from-gold/30 to-secondary/30 blur-2xl" />
+            <img
+              src={heroImage}
+              alt="Lloyds Business Solution — printing, passport photos, KRA and digital services in Nairobi"
+              width={1536}
+              height={1024}
+              className="relative rounded-3xl shadow-elegant ring-1 ring-primary-foreground/10"
+            />
           </div>
         </div>
       </section>
