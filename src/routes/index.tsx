@@ -6,6 +6,7 @@ import {
   BookOpen, Calculator, HardDrive,
 } from "lucide-react";
 import { waLink } from "@/lib/site";
+import heroImage from "@/assets/hero-services.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
