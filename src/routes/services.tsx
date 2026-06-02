@@ -92,6 +92,49 @@ function ServicesPage() {
         </div>
       </section>
 
+      <section className="mx-auto max-w-6xl px-4 pt-12">
+        <Link
+          to="/services/coworking"
+          className="group relative block overflow-hidden rounded-3xl bg-gradient-brand p-8 text-primary-foreground shadow-elegant md:p-12"
+        >
+          <div className="absolute -right-16 -top-16 h-64 w-64 rounded-full bg-gold/25 blur-3xl" />
+          <div className="absolute -bottom-20 -left-10 h-64 w-64 rounded-full bg-secondary/30 blur-3xl" />
+          <div className="relative grid items-center gap-8 md:grid-cols-[1fr_auto]">
+            <div>
+              <span className="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-gold/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-gold">
+                <Sparkles className="h-3.5 w-3.5" /> New · Featured
+              </span>
+              <h2 className="mt-4 font-display text-3xl font-bold leading-tight md:text-4xl">
+                Serene & Comfortable Co-working Space — <span className="text-gold">at unbeatable rates</span>
+              </h2>
+              <p className="mt-3 max-w-2xl text-primary-foreground/85">
+                Focus, create and grow in a quiet, professional workspace right in Nairobi.
+                Flexible hourly, daily and monthly plans for freelancers, students and SMEs.
+              </p>
+              <div className="mt-5 flex flex-wrap gap-4 text-sm text-primary-foreground/90">
+                <span className="inline-flex items-center gap-2"><Wifi className="h-4 w-4 text-gold" /> Fast Wi-Fi</span>
+                <span className="inline-flex items-center gap-2"><BatteryCharging className="h-4 w-4 text-gold" /> Power backup</span>
+                <span className="inline-flex items-center gap-2"><Sofa className="h-4 w-4 text-gold" /> Comfortable desks</span>
+              </div>
+            </div>
+            <div className="flex flex-wrap gap-3">
+              <span className="inline-flex items-center gap-2 rounded-full bg-background px-5 py-3 text-sm font-semibold text-primary">
+                Explore co-working <ArrowRight className="h-4 w-4" />
+              </span>
+              <a
+                href={waLink("Hello Lloyds, I'd like to book a co-working space.")}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={(e) => e.stopPropagation()}
+                className="inline-flex items-center gap-2 rounded-full bg-whatsapp px-5 py-3 text-sm font-semibold text-whatsapp-foreground hover:opacity-90"
+              >
+                <MessageCircle className="h-4 w-4" /> Book on WhatsApp
+              </a>
+            </div>
+          </div>
+        </Link>
+      </section>
+
       <section className="mx-auto max-w-6xl px-4 py-16">
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {groups.map((g) => {
