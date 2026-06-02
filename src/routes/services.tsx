@@ -19,6 +19,14 @@ export const Route = createFileRoute("/services")({
 
 const groups = [
   {
+    icon: Sofa,
+    title: "Co-working Space",
+    desc: "Serene, comfortable workspace with fast Wi-Fi and power backup at very competitive rates.",
+    href: "/services/coworking",
+    cta: "View co-working space",
+    featured: true,
+  },
+  {
     icon: Printer,
     title: "Printing & Document Services",
     desc: "Black & white and color printing, photocopying, scanning, and lamination.",
