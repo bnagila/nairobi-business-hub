@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Printer, Landmark, Wrench, GraduationCap, ShoppingBag, FileText, Camera } from "lucide-react";
+import { ArrowRight, Printer, Landmark, Wrench, GraduationCap, ShoppingBag, FileText, Camera, Sofa, Sparkles, Wifi, BatteryCharging, MessageCircle } from "lucide-react";
+import { waLink } from "@/lib/site";
 import { ServiceCTA } from "@/components/ServiceCTA";
 
 export const Route = createFileRoute("/services")({
