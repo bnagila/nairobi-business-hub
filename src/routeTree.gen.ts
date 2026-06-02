@@ -19,6 +19,7 @@ import { Route as ServicesPassportPhotosRouteImport } from './routes/services.pa
 import { Route as ServicesNtsaRouteImport } from './routes/services.ntsa'
 import { Route as ServicesKraRouteImport } from './routes/services.kra'
 import { Route as ServicesCvWritingRouteImport } from './routes/services.cv-writing'
+import { Route as ServicesCoworkingRouteImport } from './routes/services.coworking'
 import { Route as ServicesComputerRepairRouteImport } from './routes/services.computer-repair'
 
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
@@ -71,6 +72,11 @@ const ServicesCvWritingRoute = ServicesCvWritingRouteImport.update({
   path: '/cv-writing',
   getParentRoute: () => ServicesRoute,
 } as any)
+const ServicesCoworkingRoute = ServicesCoworkingRouteImport.update({
+  id: '/coworking',
+  path: '/coworking',
+  getParentRoute: () => ServicesRoute,
+} as any)
 const ServicesComputerRepairRoute = ServicesComputerRepairRouteImport.update({
   id: '/computer-repair',
   path: '/computer-repair',
@@ -84,6 +90,7 @@ export interface FileRoutesByFullPath {
   '/services': typeof ServicesRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/services/computer-repair': typeof ServicesComputerRepairRoute
+  '/services/coworking': typeof ServicesCoworkingRoute
   '/services/cv-writing': typeof ServicesCvWritingRoute
   '/services/kra': typeof ServicesKraRoute
   '/services/ntsa': typeof ServicesNtsaRoute
@@ -97,6 +104,7 @@ export interface FileRoutesByTo {
   '/services': typeof ServicesRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/services/computer-repair': typeof ServicesComputerRepairRoute
+  '/services/coworking': typeof ServicesCoworkingRoute
   '/services/cv-writing': typeof ServicesCvWritingRoute
   '/services/kra': typeof ServicesKraRoute
   '/services/ntsa': typeof ServicesNtsaRoute
@@ -111,6 +119,7 @@ export interface FileRoutesById {
   '/services': typeof ServicesRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/services/computer-repair': typeof ServicesComputerRepairRoute
+  '/services/coworking': typeof ServicesCoworkingRoute
   '/services/cv-writing': typeof ServicesCvWritingRoute
   '/services/kra': typeof ServicesKraRoute
   '/services/ntsa': typeof ServicesNtsaRoute
@@ -126,6 +135,7 @@ export interface FileRouteTypes {
     | '/services'
     | '/sitemap.xml'
     | '/services/computer-repair'
+    | '/services/coworking'
     | '/services/cv-writing'
     | '/services/kra'
     | '/services/ntsa'
@@ -139,6 +149,7 @@ export interface FileRouteTypes {
     | '/services'
     | '/sitemap.xml'
     | '/services/computer-repair'
+    | '/services/coworking'
     | '/services/cv-writing'
     | '/services/kra'
     | '/services/ntsa'
@@ -152,6 +163,7 @@ export interface FileRouteTypes {
     | '/services'
     | '/sitemap.xml'
     | '/services/computer-repair'
+    | '/services/coworking'
     | '/services/cv-writing'
     | '/services/kra'
     | '/services/ntsa'
@@ -239,6 +251,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesCvWritingRouteImport
       parentRoute: typeof ServicesRoute
     }
+    '/services/coworking': {
+      id: '/services/coworking'
+      path: '/coworking'
+      fullPath: '/services/coworking'
+      preLoaderRoute: typeof ServicesCoworkingRouteImport
+      parentRoute: typeof ServicesRoute
+    }
     '/services/computer-repair': {
       id: '/services/computer-repair'
       path: '/computer-repair'
@@ -251,6 +270,7 @@ declare module '@tanstack/react-router' {
 
 interface ServicesRouteChildren {
   ServicesComputerRepairRoute: typeof ServicesComputerRepairRoute
+  ServicesCoworkingRoute: typeof ServicesCoworkingRoute
   ServicesCvWritingRoute: typeof ServicesCvWritingRoute
   ServicesKraRoute: typeof ServicesKraRoute
   ServicesNtsaRoute: typeof ServicesNtsaRoute
@@ -260,6 +280,7 @@ interface ServicesRouteChildren {
 
 const ServicesRouteChildren: ServicesRouteChildren = {
   ServicesComputerRepairRoute: ServicesComputerRepairRoute,
+  ServicesCoworkingRoute: ServicesCoworkingRoute,
   ServicesCvWritingRoute: ServicesCvWritingRoute,
   ServicesKraRoute: ServicesKraRoute,
   ServicesNtsaRoute: ServicesNtsaRoute,
