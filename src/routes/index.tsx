@@ -3,7 +3,7 @@ import {
   Printer, Landmark, Wrench, GraduationCap, ShoppingBag,
   Zap, ShieldCheck, BadgeCheck, MessageCircle, MapPin, ArrowRight,
   Camera, FileText, Palette, IdCard, FileCheck, Smartphone, Cable,
-  BookOpen, Calculator, HardDrive,
+  BookOpen, Calculator, HardDrive, Sofa, Wifi, BatteryCharging, Sparkles,
 } from "lucide-react";
 import { waLink } from "@/lib/site";
 import heroImage from "@/assets/hero-services.jpg";
