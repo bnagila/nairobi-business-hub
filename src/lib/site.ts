@@ -6,7 +6,7 @@ export const SITE = {
   address: "Nairobi CBD, Kenya",
   phone: "+254 700 000 000",
   whatsapp: "254700000000", // digits only for wa.me link
-  email: "info@lloyds.co.ke",
+  email: "info@lloydsbusinesssolutions.co.ke",
   hours: "Mon – Sat · 8:00 AM – 7:00 PM",
 };
 
