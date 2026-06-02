@@ -24,6 +24,18 @@ export const Route = createFileRoute("/")({
 
 const categories = [
   {
+    id: "coworking",
+    title: "Co-working Space",
+    icon: Sofa,
+    items: [
+      { icon: Sofa, label: "Serene & Comfortable Desks" },
+      { icon: Wifi, label: "Fast Wi-Fi" },
+      { icon: BatteryCharging, label: "Power Backup" },
+      { icon: Sparkles, label: "Very Competitive Rates" },
+    ],
+    link: "/services/coworking",
+  },
+  {
     id: "digital",
     title: "Digital & Office Services",
     icon: Printer,
