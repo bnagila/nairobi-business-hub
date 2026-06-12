@@ -4,8 +4,8 @@ export const SITE = {
   tagline: "Your Complete Business & Digital Services Hub",
   city: "Nairobi, Kenya",
   address: "Nairobi CBD, Kenya",
-  phone: "+254 700 000 000",
-  whatsapp: "254700000000", // digits only for wa.me link
+  phone: "+254 116111120",
+  whatsapp: "254116111120", // digits only for wa.me link
   email: "info@lloydsbusinesssolutions.co.ke",
   hours: "Mon – Sat · 8:00 AM – 7:00 PM",
 };
