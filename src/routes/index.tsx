@@ -4,17 +4,22 @@ import {
   Zap, ShieldCheck, BadgeCheck, MessageCircle, MapPin, ArrowRight,
   Camera, FileText, Palette, IdCard, FileCheck, Smartphone, Cable,
   BookOpen, Calculator, HardDrive, Sofa, Wifi, BatteryCharging, Sparkles,
+  Coffee, Clock,
 } from "lucide-react";
 import { waLink } from "@/lib/site";
-import heroImage from "@/assets/hero-services.jpg";
+import coworkingAsset from "@/assets/coworking-desks.jpg.asset.json";
+import coworkingOfficeAsset from "@/assets/coworking-office.jpg.asset.json";
+import coworkingPrivateAsset from "@/assets/coworking-private.jpg.asset.json";
+const coworkingHero = coworkingAsset.url;
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Lloyds Business Solution — Printing, KRA, NTSA & Digital Services in Nairobi" },
-      { name: "description", content: "Your complete business & digital services hub in Nairobi. Printing, government services, computer repairs, training and more — fast, reliable, affordable." },
-      { property: "og:title", content: "Lloyds Business Solution — Nairobi" },
-      { property: "og:description", content: "Printing • Government Services • Repairs • Training • Business Solutions in Nairobi." },
+      { title: "Serene Co-working Space in Nairobi — Lloyds Business Solution" },
+      { name: "description", content: "Nairobi's most serene and comfortable co-working space at unbeatable rates. Fast Wi-Fi, power backup, quiet desks. Plus printing, KRA, NTSA, repairs & more under one roof." },
+      { property: "og:title", content: "Serene Co-working Space in Nairobi — Lloyds" },
+      { property: "og:description", content: "Nairobi's serenest co-working space at unbeatable rates — plus every business & digital service you need." },
+      { property: "og:image", content: coworkingAsset.url },
       { property: "og:url", content: "/" },
     ],
     links: [{ rel: "canonical", href: "/" }],
