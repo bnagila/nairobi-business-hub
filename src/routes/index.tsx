@@ -4,17 +4,22 @@ import {
   Zap, ShieldCheck, BadgeCheck, MessageCircle, MapPin, ArrowRight,
   Camera, FileText, Palette, IdCard, FileCheck, Smartphone, Cable,
   BookOpen, Calculator, HardDrive, Sofa, Wifi, BatteryCharging, Sparkles,
+  Coffee, Clock,
 } from "lucide-react";
 import { waLink } from "@/lib/site";
-import heroImage from "@/assets/hero-services.jpg";
+import coworkingAsset from "@/assets/coworking-desks.jpg.asset.json";
+import coworkingOfficeAsset from "@/assets/coworking-office.jpg.asset.json";
+import coworkingPrivateAsset from "@/assets/coworking-private.jpg.asset.json";
+const coworkingHero = coworkingAsset.url;
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Lloyds Business Solution — Printing, KRA, NTSA & Digital Services in Nairobi" },
-      { name: "description", content: "Your complete business & digital services hub in Nairobi. Printing, government services, computer repairs, training and more — fast, reliable, affordable." },
-      { property: "og:title", content: "Lloyds Business Solution — Nairobi" },
-      { property: "og:description", content: "Printing • Government Services • Repairs • Training • Business Solutions in Nairobi." },
+      { title: "Serene Co-working Space in Nairobi — Lloyds Business Solution" },
+      { name: "description", content: "Nairobi's most serene and comfortable co-working space at unbeatable rates. Fast Wi-Fi, power backup, quiet desks. Plus printing, KRA, NTSA, repairs & more under one roof." },
+      { property: "og:title", content: "Serene Co-working Space in Nairobi — Lloyds" },
+      { property: "og:description", content: "Nairobi's serenest co-working space at unbeatable rates — plus every business & digital service you need." },
+      { property: "og:image", content: coworkingAsset.url },
       { property: "og:url", content: "/" },
     ],
     links: [{ rel: "canonical", href: "/" }],
@@ -108,54 +113,64 @@ const trust = [
 function Home() {
   return (
     <>
-      {/* HERO */}
+      {/* HERO — CO-WORKING FIRST */}
       <section className="relative overflow-hidden bg-gradient-hero text-primary-foreground">
-        <div className="absolute -right-32 -top-32 h-96 w-96 rounded-full bg-gold/20 blur-3xl" />
+        <div className="absolute -right-32 -top-32 h-96 w-96 rounded-full bg-gold/25 blur-3xl" />
         <div className="absolute -bottom-40 -left-20 h-96 w-96 rounded-full bg-secondary/30 blur-3xl" />
 
-        <div className="relative mx-auto grid max-w-6xl gap-12 px-4 py-20 md:grid-cols-2 md:items-center md:py-28">
+        <div className="relative mx-auto grid max-w-6xl gap-12 px-4 py-16 md:grid-cols-2 md:items-center md:py-24">
           <div>
-            <span className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/20 bg-primary-foreground/5 px-3 py-1 text-xs font-medium backdrop-blur">
+            <span className="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-gold/10 px-3 py-1 text-xs font-bold uppercase tracking-widest text-gold backdrop-blur">
               <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-gold" />
-              Open today in Nairobi
+              Now Open in Nairobi · Flagship Service
             </span>
-            <h1 className="mt-5 font-display text-4xl font-bold leading-[1.1] md:text-5xl lg:text-6xl">
-              Your Complete Business & Digital Services Hub —{" "}
-              <span className="text-gold">In One Place.</span>
+            <h1 className="mt-5 font-display text-4xl font-black leading-[1.05] md:text-6xl lg:text-7xl">
+              Nairobi's most{" "}
+              <span className="bg-gradient-to-r from-gold via-gold to-yellow-200 bg-clip-text text-transparent">
+                serene co-working
+              </span>{" "}
+              space.
             </h1>
-            <p className="mt-5 max-w-xl text-base text-primary-foreground/85 md:text-lg">
-              Printing • Government Services • Repairs • Training • Business Solutions.
-              Trusted by individuals, students and SMEs across Nairobi.
+            <p className="mt-5 max-w-xl text-lg text-primary-foreground/90 md:text-xl">
+              Quiet, comfortable and fully-equipped — at <strong className="text-gold">unbeatable rates</strong>.
+              Built for freelancers, remote workers, students and SMEs who want to focus and ship.
             </p>
 
+            <div className="mt-6 grid max-w-md grid-cols-2 gap-2 text-sm">
+              <span className="inline-flex items-center gap-2 rounded-lg bg-white/10 px-3 py-2 backdrop-blur"><Wifi className="h-4 w-4 text-gold" /> Fast Wi-Fi</span>
+              <span className="inline-flex items-center gap-2 rounded-lg bg-white/10 px-3 py-2 backdrop-blur"><BatteryCharging className="h-4 w-4 text-gold" /> Power backup</span>
+              <span className="inline-flex items-center gap-2 rounded-lg bg-white/10 px-3 py-2 backdrop-blur"><Coffee className="h-4 w-4 text-gold" /> Coffee on tap</span>
+              <span className="inline-flex items-center gap-2 rounded-lg bg-white/10 px-3 py-2 backdrop-blur"><Clock className="h-4 w-4 text-gold" /> Hourly · Daily · Monthly</span>
+            </div>
+
             <div className="mt-8 flex flex-wrap gap-3">
-              <a
-                href={waLink()}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full bg-whatsapp px-6 py-3.5 text-sm font-semibold text-whatsapp-foreground shadow-elegant transition-transform hover:scale-[1.02]"
-              >
-                <MessageCircle className="h-4 w-4" /> Chat on WhatsApp
-              </a>
               <Link
-                to="/contact"
-                className="inline-flex items-center gap-2 rounded-full bg-background px-6 py-3.5 text-sm font-semibold text-primary hover:bg-background/90"
+                to="/services/coworking"
+                className="inline-flex items-center gap-2 rounded-full bg-gold px-6 py-3.5 text-sm font-bold text-primary shadow-elegant transition-transform hover:scale-[1.03]"
               >
-                <MapPin className="h-4 w-4" /> Visit Our Branch
+                Explore Co-working <ArrowRight className="h-4 w-4" />
               </Link>
               <a
-                href="#services"
-                className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/30 px-6 py-3.5 text-sm font-semibold text-primary-foreground hover:bg-primary-foreground/10"
+                href={waLink("Hello Lloyds, I'd like to book a co-working space.")}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full bg-whatsapp px-6 py-3.5 text-sm font-bold text-whatsapp-foreground shadow-elegant hover:opacity-90"
               >
-                Explore Services <ArrowRight className="h-4 w-4" />
+                <MessageCircle className="h-4 w-4" /> Book on WhatsApp
+              </a>
+              <a
+                href="#services"
+                className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/30 px-5 py-3.5 text-sm font-semibold text-primary-foreground hover:bg-primary-foreground/10"
+              >
+                Other services
               </a>
             </div>
 
-            <div className="mt-12 grid max-w-md grid-cols-3 gap-6 text-sm">
+            <div className="mt-10 grid max-w-md grid-cols-3 gap-6 text-sm">
               {[
-                { k: "20+", v: "Services offered" },
-                { k: "1000s", v: "Happy customers" },
-                { k: "6 days", v: "Open weekly" },
+                { k: "24/6", v: "Access days" },
+                { k: "1 Gbps", v: "Wi-Fi speed" },
+                { k: "KES", v: "Best rates in town" },
               ].map((s) => (
                 <div key={s.v}>
                   <div className="font-display text-2xl font-bold text-gold">{s.k}</div>
@@ -167,66 +182,38 @@ function Home() {
 
           <div className="relative">
             <div className="absolute -inset-4 rounded-3xl bg-gradient-to-tr from-gold/30 to-secondary/30 blur-2xl" />
-            <img
-              src={heroImage}
-              alt="Lloyds Business Solution — printing, passport photos, KRA and digital services in Nairobi"
-              width={1536}
-              height={1024}
-              className="relative rounded-3xl shadow-elegant ring-1 ring-primary-foreground/10"
-            />
+            <div className="relative grid grid-cols-3 gap-3">
+              <img
+                src={coworkingHero}
+                alt="Serene co-working space in Nairobi at Lloyds Business Solution"
+                width={1600}
+                height={1200}
+                className="col-span-3 h-72 w-full rounded-3xl object-cover shadow-elegant ring-1 ring-primary-foreground/10 md:h-96"
+              />
+              <img
+                src={coworkingOfficeAsset.url}
+                alt="Private co-working workstation in Nairobi"
+                loading="lazy"
+                className="col-span-2 h-32 w-full rounded-2xl object-cover shadow-soft ring-1 ring-primary-foreground/10 md:h-40"
+              />
+              <img
+                src={coworkingPrivateAsset.url}
+                alt="Quiet executive desk at Lloyds co-working space"
+                loading="lazy"
+                className="h-32 w-full rounded-2xl object-cover shadow-soft ring-1 ring-primary-foreground/10 md:h-40"
+              />
+            </div>
+            <div className="absolute -bottom-4 left-4 rotate-[-3deg] rounded-full bg-background px-4 py-2 text-xs font-black uppercase tracking-widest text-primary shadow-elegant">
+              ★ Nairobi's serenest spot
+            </div>
           </div>
         </div>
       </section>
 
-      {/* FEATURED — CO-WORKING */}
-      <section className="mx-auto max-w-6xl px-4 pt-16">
-        <Link
-          to="/services/coworking"
-          className="group relative block overflow-hidden rounded-3xl border border-gold/30 bg-gradient-brand p-8 text-primary-foreground shadow-elegant md:p-12"
-        >
-          <div className="absolute -right-20 -top-20 h-72 w-72 rounded-full bg-gold/25 blur-3xl" />
-          <div className="absolute -bottom-24 -left-10 h-72 w-72 rounded-full bg-secondary/30 blur-3xl" />
-          <div className="relative grid items-center gap-8 md:grid-cols-[1fr_auto]">
-            <div>
-              <span className="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-gold/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-gold">
-                <Sparkles className="h-3.5 w-3.5" /> New · Featured
-              </span>
-              <h2 className="mt-4 font-display text-3xl font-bold leading-tight md:text-4xl">
-                Serene Co-working Space — <span className="text-gold">at unbeatable rates</span>
-              </h2>
-              <p className="mt-3 max-w-2xl text-primary-foreground/85">
-                A quiet, comfortable workspace in Nairobi for freelancers, students and SMEs.
-                Flexible hourly, daily and monthly plans.
-              </p>
-              <div className="mt-5 flex flex-wrap gap-4 text-sm text-primary-foreground/90">
-                <span className="inline-flex items-center gap-2"><Wifi className="h-4 w-4 text-gold" /> Fast Wi-Fi</span>
-                <span className="inline-flex items-center gap-2"><BatteryCharging className="h-4 w-4 text-gold" /> Power backup</span>
-                <span className="inline-flex items-center gap-2"><Sofa className="h-4 w-4 text-gold" /> Comfortable desks</span>
-              </div>
-            </div>
-            <div className="flex flex-wrap gap-3">
-              <span className="inline-flex items-center gap-2 rounded-full bg-background px-5 py-3 text-sm font-semibold text-primary">
-                Explore co-working <ArrowRight className="h-4 w-4" />
-              </span>
-              <a
-                href={waLink("Hello Lloyds, I'd like to book a co-working space.")}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={(e) => e.stopPropagation()}
-                className="inline-flex items-center gap-2 rounded-full bg-whatsapp px-5 py-3 text-sm font-semibold text-whatsapp-foreground hover:opacity-90"
-              >
-                <MessageCircle className="h-4 w-4" /> Book on WhatsApp
-              </a>
-            </div>
-          </div>
-        </Link>
-      </section>
-
-
       {/* SERVICES OVERVIEW */}
       <section id="services" className="mx-auto max-w-6xl px-4 py-20">
         <div className="mx-auto max-w-2xl text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-secondary">What we offer</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-secondary">More we offer</p>
           <h2 className="mt-3 font-display text-3xl font-bold text-foreground md:text-4xl">
             Everything you need, under one roof
           </h2>
