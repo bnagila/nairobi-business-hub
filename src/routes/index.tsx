@@ -210,9 +210,10 @@ function Home() {
         </div>
       </section>
 
-
+      {/* SERVICES OVERVIEW */}
+      <section id="services" className="mx-auto max-w-6xl px-4 py-20">
         <div className="mx-auto max-w-2xl text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-secondary">What we offer</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-secondary">More we offer</p>
           <h2 className="mt-3 font-display text-3xl font-bold text-foreground md:text-4xl">
             Everything you need, under one roof
           </h2>
