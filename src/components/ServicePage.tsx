@@ -84,7 +84,7 @@ export function ServicePage({
         </div>
       </section>
 
-      <ServiceCTA service={serviceName} />
+      <ServiceCTA service={serviceName} message={whatsappMessage} />
     </div>
   );
 }
