@@ -10,7 +10,9 @@ import { waLink } from "@/lib/site";
 import coworkingAsset from "@/assets/coworking-desks.jpg.asset.json";
 import coworkingOfficeAsset from "@/assets/coworking-office.jpg.asset.json";
 import coworkingPrivateAsset from "@/assets/coworking-private.jpg.asset.json";
+import heroCoworkingPersonAsset from "@/assets/hero-coworking-person.jpg.asset.json";
 const coworkingHero = coworkingAsset.url;
+const heroCoworkingPerson = heroCoworkingPersonAsset.url;
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -184,8 +186,8 @@ function Home() {
             <div className="absolute -inset-4 rounded-3xl bg-gradient-to-tr from-gold/30 to-secondary/30 blur-2xl" />
             <div className="relative grid grid-cols-3 gap-3">
               <img
-                src={coworkingHero}
-                alt="Serene co-working space in Nairobi at Lloyds Business Solution"
+                src={heroCoworkingPerson}
+                alt="Freelancer working in the serene Lloyds co-working space in Nairobi"
                 width={1600}
                 height={1200}
                 className="col-span-3 h-72 w-full rounded-3xl object-cover shadow-elegant ring-1 ring-primary-foreground/10 md:h-96"
