@@ -139,7 +139,7 @@ function Home() {
             <div className="mt-6 grid max-w-md grid-cols-2 gap-2 text-sm">
               <span className="inline-flex items-center gap-2 rounded-lg bg-white/10 px-3 py-2 backdrop-blur"><Wifi className="h-4 w-4 text-gold" /> Fast Wi-Fi</span>
               <span className="inline-flex items-center gap-2 rounded-lg bg-white/10 px-3 py-2 backdrop-blur"><BatteryCharging className="h-4 w-4 text-gold" /> Power backup</span>
-              <span className="inline-flex items-center gap-2 rounded-lg bg-white/10 px-3 py-2 backdrop-blur"><Coffee className="h-4 w-4 text-gold" /> Coffee on tap</span>
+              <span className="inline-flex items-center gap-2 rounded-lg bg-white/10 px-3 py-2 backdrop-blur"><Sparkles className="h-4 w-4 text-gold" /> From KES 1,000/day</span>
               <span className="inline-flex items-center gap-2 rounded-lg bg-white/10 px-3 py-2 backdrop-blur"><Clock className="h-4 w-4 text-gold" /> Hourly · Daily · Monthly</span>
             </div>
 
