@@ -169,7 +169,7 @@ function Home() {
             <div className="mt-10 grid max-w-md grid-cols-3 gap-6 text-sm">
               {[
                 { k: "24/6", v: "Access days" },
-                { k: "1 Gbps", v: "Wi-Fi speed" },
+                { k: "Reliable", v: "Internet" },
                 { k: "KES", v: "Best rates in town" },
               ].map((s) => (
                 <div key={s.v}>
