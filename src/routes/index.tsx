@@ -10,7 +10,9 @@ import { waLink } from "@/lib/site";
 import coworkingAsset from "@/assets/coworking-desks.jpg.asset.json";
 import coworkingOfficeAsset from "@/assets/coworking-office.jpg.asset.json";
 import coworkingPrivateAsset from "@/assets/coworking-private.jpg.asset.json";
+import heroCoworkingPersonAsset from "@/assets/hero-coworking-person.jpg.asset.json";
 const coworkingHero = coworkingAsset.url;
+const heroCoworkingPerson = heroCoworkingPersonAsset.url;
 
 export const Route = createFileRoute("/")({
   head: () => ({
