@@ -186,8 +186,8 @@ function Home() {
             <div className="absolute -inset-4 rounded-3xl bg-gradient-to-tr from-gold/30 to-secondary/30 blur-2xl" />
             <div className="relative grid grid-cols-3 gap-3">
               <img
-                src={coworkingHero}
-                alt="Serene co-working space in Nairobi at Lloyds Business Solution"
+                src={heroCoworkingPerson}
+                alt="Freelancer working in the serene Lloyds co-working space in Nairobi"
                 width={1600}
                 height={1200}
                 className="col-span-3 h-72 w-full rounded-3xl object-cover shadow-elegant ring-1 ring-primary-foreground/10 md:h-96"
