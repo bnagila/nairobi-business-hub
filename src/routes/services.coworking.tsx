@@ -57,6 +57,7 @@ function CoworkingPage() {
         title="Serene & Comfortable Co-working Space in Nairobi"
         intro="Focus, create and grow in our calm, professional co-working space — designed for freelancers, remote workers, students and small business owners in Nairobi. Enjoy fast internet, comfortable seating and a productive atmosphere at very competitive rates."
         serviceName="co-working space"
+        whatsappMessage="Hello Lloyds, I'm interested in your co-working space. I saw the KES 1,000/day rate and would like to ask about availability and booking."
         benefits={[
           "Serene, quiet and comfortable working environment",
           "Very competitive hourly, daily and monthly rates",

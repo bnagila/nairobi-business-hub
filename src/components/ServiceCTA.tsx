@@ -1,10 +1,10 @@
 import { MessageCircle, MapPin } from "lucide-react";
 import { waLink } from "@/lib/site";
 
-export function ServiceCTA({ service }: { service?: string }) {
-  const msg = service
+export function ServiceCTA({ service, message }: { service?: string; message?: string }) {
+  const msg = message ?? (service
     ? `Hello Lloyds, I'd like to inquire about ${service}.`
-    : undefined;
+    : undefined);
   return (
     <section className="mx-auto mt-16 max-w-5xl px-4">
       <div className="overflow-hidden rounded-3xl bg-gradient-brand p-8 text-primary-foreground shadow-elegant md:p-12">

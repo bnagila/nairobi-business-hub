@@ -9,6 +9,7 @@ export interface ServicePageProps {
   process: { step: string; detail: string }[];
   faqs: { q: string; a: string }[];
   serviceName: string;
+  whatsappMessage?: string;
 }
 
 export function ServicePage({
@@ -19,6 +20,7 @@ export function ServicePage({
   process,
   faqs,
   serviceName,
+  whatsappMessage,
 }: ServicePageProps) {
   return (
     <div className="pb-10">
@@ -82,7 +84,7 @@ export function ServicePage({
         </div>
       </section>
 
-      <ServiceCTA service={serviceName} />
+      <ServiceCTA service={serviceName} message={whatsappMessage} />
     </div>
   );
 }
